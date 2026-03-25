@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Compatibilité Polices Windows / Langues avec Thèmes</title>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  th { background-color: #f0f0f0; }
+</style>
+</head>
+<body>
+
+<h2>Compatibilité Polices Windows / Langues avec Thèmes</h2>
+
+<table id="fontTable" class="display">
+  <thead>
+    <tr>
+      <th>Langue</th>
+      <th>Segoe UI</th>
+      <th>Microsoft YaHei</th>
+      <th>SimSun</th>
+      <th>Yu Gothic</th>
+      <th>Malgun Gothic</th>
+      <th>Nirmala UI</th>
+      <th>Tahoma</th>
+      <th>Arial</th>
+      <th>Nom de thème</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Español (Espagnol / Spanish)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Français (Français / French)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Português (Portugal) (Portugais / Portuguese)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Português (Brésil) (Portugais / Portuguese)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Deutsch (Allemand / German)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Italiano (Italien / Italian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Română (Roumain / Romanian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Nederlands (Néerlandais / Dutch)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Ελληνικά (Grec / Greek)</td><td>✅</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Mandarin (Mandarin / Chinese)</td><td>🔴</td><td>✅</td><td>✅</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>Chinese</td></tr>
+    <tr><td>English (Anglais / English)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Hindi (Hindi / Hindi)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>العربية (Arabe / Arabic)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>MiddleEast</td></tr>
+    <tr><td>বাংলা (Bengali / Bengali)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>Русский (Russe / Russian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Bahasa Indonesia (Indonésien / Indonesian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>اردو (Ourdou / Urdu)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>MiddleEast</td></tr>
+    <tr><td>日本語 (Japonais / Japanese)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>Japanese</td></tr>
+    <tr><td>मराठी (Marathi / Marathi)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>తెలుగు (Télougou / Telugu)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>Türkçe (Turc / Turkish)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>தமிழ் (Tamoul / Tamil)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>Tiếng Việt (Vietnamien / Vietnamese)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>한국어 (Coréen / Korean)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>🔴</td><td>✅</td><td>✅</td><td>Korean</td></tr>
+    <tr><td>فارسی (Persan / Persian)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>MiddleEast</td></tr>
+    <tr><td>ಕನ್ನಡ (Kannada / Kannada)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>ગુજરાતી (Gujarati / Gujarati)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>മലയാളം (Malayalam / Malayalam)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>ਪੰਜਾਬੀ (Punjabi / Punjabi)</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>✅</td><td>✅</td><td>✅</td><td>Indic</td></tr>
+    <tr><td>Polski (Polonais / Polish)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Čeština (Tchèque / Czech)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Magyar (Hongrois / Hungarian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Svenska (Suédois / Swedish)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Dansk (Danois / Danish)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Suomi (Finnois / Finnish)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Български (Bulgare / Bulgarian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Slovenčina (Slovaque / Slovak)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Hrvatski (Croate / Croatian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Српски (Serbe / Serbian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Norsk (Norvégien / Norwegian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Lietuvių (Lituanien / Lithuanian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Latviešu (Letton / Latvian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Eesti (Estonien / Estonian)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Íslenska (Islandais / Icelandic)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Malti (Maltais / Maltese)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+    <tr><td>Қазақша (Kazakh / Kazakh)</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>Western</td></tr>
+  </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#fontTable').DataTable({
+      paging: true,
+      searching: true,
+      order: [[0, 'asc']]
+    });
+  });
+</script>
+
+</body>
+</html>

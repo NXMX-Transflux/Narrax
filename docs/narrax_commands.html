@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Commandes Narrax/NX</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    padding: 30px;
+}
+h1 { color: #2c3e50; margin-bottom: 20px; }
+.command-block {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.command-line {
+    font-family: monospace;
+    font-size: 14px;
+}
+.description {
+    font-size: 12px;
+    color: #555;
+    margin-top: 4px;
+}
+button {
+    margin-top: 5px;
+    padding: 5px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+}
+button:hover { background: #2980b9; }
+#aliasToggle {
+    margin-bottom: 20px;
+    background: #27ae60;
+}
+#aliasToggle:hover { background: #1e8449; }
+#translateBtn {
+    margin-bottom: 20px;
+    background: #e67e22;
+}
+#translateBtn:hover { background: #d35400; }
+</style>
+</head>
+<body>
+
+<h1>Commandes Narrax/NX Interactives</h1>
+
+<button id="aliasToggle">Basculer Alias NX/Narrax</button>
+<button id="translateBtn">Traduire descriptions → EN</button>
+
+<div id="commands-container"></div>
+
+<script>
+// Liste des commandes et descriptions
+const commands = [
+    { cmd: "//narrax help", desc: "Affiche toutes les commandes disponibles" },
+    { cmd: "//narrax 0", desc: "Mode d’affichage 0" },
+    { cmd: "//narrax 1", desc: "Mode d’affichage 1" },
+    { cmd: "//narrax 2", desc: "Mode d’affichage 2" },
+    { cmd: "//narrax reset", desc: "Réinitialise la position de la fenêtre" },
+    { cmd: "//narrax theme <nom_du_theme>", desc: "Change le thème graphique" },
+    { cmd: "//narrax scale <valeur>", desc: "Change la taille de l’UI" },
+    { cmd: "//narrax delay <secondes>", desc: "Délai avant fermeture automatique" },
+    { cmd: "//narrax text_speed <chars>", desc: "Vitesse d’affichage du texte" },
+    { cmd: "//narrax animate", desc: "Active/désactive l’animation du prompt" },
+    { cmd: "//narrax portrait", desc: "Affiche/caché les portraits des PNJ" },
+    { cmd: "//narrax move_closes", desc: "Ferme la fenêtre lors du mouvement" },
+    { cmd: "//narrax translate", desc: "Active/désactive la traduction automatique" },
+    { cmd: "//narrax language <langue>", desc: "Change la langue pour la traduction" },
+    { cmd: "//narrax debug <mode>", desc: "Active le mode debug" },
+    { cmd: "//narrax test <nom> : <message>", desc: "Test de l’affichage d’un message" }
+];
+
+let useNX = false;
+
+// Fonction de rendu
+async function renderCommands(list) {
+    const container = document.getElementById("commands-container");
+    container.innerHTML = "";
+    for (const item of list) {
+        const block = document.createElement("div");
+        block.className = "command-block";
+
+        const line = document.createElement("div");
+        line.className = "command-line";
+        line.textContent = useNX ? item.cmd.replace("//narrax", "//nx") : item.cmd;
+
+        const btn = document.createElement("button");
+        btn.textContent = "Copier la commande";
+        btn.onclick = () => {
+            navigator.clipboard.writeText(line.textContent).then(() => {
+                btn.textContent = "Copié !";
+                setTimeout(() => btn.textContent = "Copier la commande", 1000);
+            });
+        };
+
+        const desc = document.createElement("div");
+        desc.className = "description";
+        desc.textContent = item.desc;
+
+        block.appendChild(line);
+        block.appendChild(btn);
+        block.appendChild(desc);
+        container.appendChild(block);
+    }
+}
+
+// Basculer alias Narrax/NX
+document.getElementById("aliasToggle").addEventListener("click", () => {
+    useNX = !useNX;
+    renderCommands(commands);
+});
+
+// Traduction des descriptions via Google Translate Web (API non officielle)
+document.getElementById("translateBtn").addEventListener("click", async () => {
+    const descs = document.querySelectorAll(".description");
+    for (let i = 0; i < descs.length; i++) {
+        const originalText = descs[i].textContent;
+        try {
+            const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=fr&tl=en&dt=t&q=${encodeURIComponent(originalText)}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            descs[i].textContent = data[0].map(p => p[0]).join('');
+        } catch (e) {
+            console.error("Erreur traduction:", e);
+        }
+    }
+});
+
+// Rendu initial
+renderCommands(commands);
+</script>
+
+</body>
+</html>

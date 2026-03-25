@@ -1,0 +1,75 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <NpcName>
+            <FontEnglish>Yu Gothic</FontEnglish>
+            <FontJapanese>Yu Gothic</FontJapanese>
+            <Size>14</Size>
+            <Width>200</Width>
+            <Height>2</Height>
+            <OffsetX>75</OffsetX>
+            <OffsetY>-1</OffsetY>
+            <TextOffsetX>75</TextOffsetX>
+            <TextOffsetY>-28</TextOffsetY>
+            <Color>
+                <Alpha>255</Alpha>
+                <Blue>255</Blue>
+                <Green>255</Green>
+                <Red>255</Red>
+            </Color>
+            <Stroke>
+                <Alpha>255</Alpha>
+                <Blue>0</Blue>
+                <Green>0</Green>
+                <Red>0</Red>
+                <Width>2</Width>
+            </Stroke>
+        </NpcName>
+        <Message>
+            <FontEnglish>Yu Gothic</FontEnglish>
+            <FontJapanese>Yu Gothic</FontJapanese>
+            <Size>14</Size>
+            <MaxLength>75</MaxLength>
+            <Width>800</Width>
+            <Height>200</Height>
+            <TextOffsetX>70</TextOffsetX>
+            <TextOffsetY>10</TextOffsetY>
+            <Dialogue>
+                <Color>
+                    <Alpha>255</Alpha>
+                    <Blue>255</Blue>
+                    <Green>255</Green>
+                    <Red>255</Red>
+                </Color>
+                <Gear>255,50,255</Gear>
+                <Items>100,255,100</Items>
+                <KeyItems>100,150,255</KeyItems>
+                <RoE>255,140,0</RoE>
+                <Emote>125,175,255</Emote>
+                <Stroke>
+                    <Alpha>255</Alpha>
+                    <Blue>0</Blue>
+                    <Green>0</Green>
+                    <Red>0</Red>
+                    <Width>2</Width>
+                </Stroke>
+            </Dialogue>
+        </Message>
+        <Prompt>
+            <Width>36</Width>
+            <Height>36</Height>
+            <OffsetX>750</OffsetX>
+            <OffsetY>150</OffsetY>
+        </Prompt>
+        <Timer>
+            <TextOffsetX>750</TextOffsetX>
+            <TextOffsetY>0</TextOffsetY>
+        </Timer>
+        <Portrait>
+            <Width>120</Width>
+            <Height>120</Height>
+            <OffsetX>75</OffsetX>
+            <OffsetY>-120</OffsetY>
+        </Portrait>
+    </global>
+</settings>
